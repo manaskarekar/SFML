@@ -115,6 +115,10 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Copy the current contents of the window to an image
     ///
+    /// \deprecated Use a sf::Texture and its update(Window&)
+    ///             function and copy its contents into an
+    ///             sf::Image instead.
+    ///
     /// This is a slow operation, whose main purpose is to make
     /// screenshots of the application. If you want to update an
     /// image with the contents of the window and then use it for
@@ -126,7 +130,7 @@ public:
     /// \return Image containing the captured contents
     ///
     ////////////////////////////////////////////////////////////
-    Image capture() const;
+    SFML_DEPRECATED Image capture() const;
 
 protected:
 
